@@ -7,7 +7,7 @@ GOOGLE_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Use the stable model name to avoid the 404 error
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # --- 2. SYSTEM INSTRUCTIONS (The Soul of Chef AI-Xora) ---
 if "system_instructions" not in st.session_state:
