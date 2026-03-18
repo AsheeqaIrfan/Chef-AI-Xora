@@ -2,10 +2,11 @@ import streamlit as st
 import google.generativeai as genai
 
 # --- 1. API CONFIGURATION ---
-# SECURITY TIP: Never hardcode your API key. 
-# You can use st.sidebar.text_input("Enter Gemini API Key", type="password") for better safety.
+# The error was caused by the model version. We are using the stable flash model now.
 GOOGLE_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GOOGLE_API_KEY)
+
+# Use the stable model name to avoid the 404 error
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # --- 2. SYSTEM INSTRUCTIONS (The Soul of Chef AI-Xora) ---
