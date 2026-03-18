@@ -6,7 +6,7 @@ import google.generativeai as genai
 # You can use st.sidebar.text_input("Enter Gemini API Key", type="password") for better safety.
 GOOGLE_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # --- 2. SYSTEM INSTRUCTIONS (The Soul of Chef AI-Xora) ---
 if "system_instructions" not in st.session_state:
